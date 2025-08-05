@@ -2,7 +2,7 @@
 // src/pages/api/github-webhook.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { tasks } from "@trigger.dev/sdk/v3";
-import { githubPushLoggerTask } from "../../../trigger/github-push"; // update path if needed
+import { githubPushLoggerTask } from "@/trigger/github-push";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
