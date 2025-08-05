@@ -14,3 +14,13 @@ export const helloWorldTask = task({
     }
   },
 });
+
+export const addNumbersTask = task({
+  id: "add-numbers",
+  maxDuration: 300,
+  run: async (payload: { a: number; b: number }, { ctx }) => {
+    const result = payload.a + payload.b;
+    logger.log("Adding numbersss", { a: payload.a, b: payload.b, result });
+    return { result };
+  },
+});
