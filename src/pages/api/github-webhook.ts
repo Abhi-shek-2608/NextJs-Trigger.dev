@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Trigger the Trigger.dev task
     await tasks.trigger<typeof githubPushLoggerTask>("github-push-logger", payload);
-    console.log("Task triggered");
+    console.log("Task triggereddd");
     return res.status(200).json({ message: "Task triggered" });
     console.log("Task triggered101");
   } catch (error) {
