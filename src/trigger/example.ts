@@ -20,7 +20,7 @@ export const addNumbersTask = task({
   maxDuration: 300,
   run: async (payload: { a: number; b: number }, { ctx }) => {
     const result = payload.a + payload.b;
-    logger.log("Adding numbersss", { a: payload.a, b: payload.b, result });
+    logger.log("Adding numbers", { a: payload.a, b: payload.b, result });
     return { result };
   },
 });
